@@ -183,10 +183,10 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'drupal7-pagoda2',
-      'username' => 'root',
-      'password' => 'root',
-      'host' => 'localhost',
+      'database' => 'shelli',
+      'username' => 'danuta',
+      'password' => 'RgwtA9VS',
+      'host' => 'localhost;unix_socket=/tmp/mysql/shelli.sock',
       'port' => '',
       'driver' => 'mysql',
       'prefix' => '',
