@@ -1,0 +1,7 @@
+general:
+    writable_directories: [/sites/default/files]
+    
+php:
+    extensions: [mysql, mysqli, pdo, pdo_mysql, mcrypt]
+    display_errors: on
+    upload_max_filesize: 20M
