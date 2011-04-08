@@ -2,6 +2,6 @@ general:
     writable_directories: [/sites/default/files]
     
 php:
-    extensions: [mysqli, gd, hash, json, xml, pdo, pdo_mysql, mcrypt]
+    extensions: [mysqli, gd, hash, json, xml, pdo, pdo_mysql, mcrypt, mbstring]
     display_errors: off
-    upload_max_filesize: 20M
+    upload_max_filesize: 5M
