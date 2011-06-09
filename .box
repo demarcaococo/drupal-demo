@@ -1,7 +1,13 @@
-general:
-    writable_directories: [/sites/default/files]
-    
-php:
-    extensions: [mysqli, gd, hash, json, xml, pdo, pdo_mysql, mcrypt, mbstring]
-    display_errors: off
-    upload_max_filesize: 5M
+shared_writable_dirs:
+    - sites/default/files
+
+php_extensions:
+    - mysqli
+    - gd
+    - hash
+    - json
+    - xml
+    - pdo
+    - pdo_mysql
+    - mcrypt
+    - mbstring
