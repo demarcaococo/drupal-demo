@@ -178,21 +178,43 @@
  *   );
  * @endcode
  */
-$databases = array (
-  'default' => 
-  array (
-    'default' => 
-    array (
-      'database' => 'shelli',
-      'username' => 'danuta',
-      'password' => 'RgwtA9VS',
-      'host' => 'localhost;unix_socket=/tmp/mysql/shelli.sock',
-      'port' => '',
-      'driver' => 'mysql',
-      'prefix' => '',
-    ),
-  ),
-);
+ 
+if (isset($_SERVER['environment']) && ($_SERVER['environment'] == 'pagoda')){
+    $databases = array (
+      'default' => 
+      array (
+        'default' => 
+        array (
+          'database' => 'shelli',
+          'username' => 'danuta',
+          'password' => 'RgwtA9VS',
+          'host' => 'localhost;unix_socket=/tmp/mysql/shelli.sock',
+          'port' => '',
+          'driver' => 'mysql',
+          'prefix' => '',
+        ),
+      ),
+    );    
+}
+
+else {
+    $databases = array (
+      'default' => 
+      array (
+        'default' => 
+        array (
+          'database' => 'drupal7-pagoda2',
+          'username' => 'root',
+          'password' => 'root',
+          'host' => 'localhost',
+          'port' => '',
+          'driver' => 'mysql',
+          'prefix' => '',
+        ),
+      ),
+    );
+}
+
 
 /**
  * Access control for update.php script.
