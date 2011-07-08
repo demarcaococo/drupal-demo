@@ -177,21 +177,43 @@
  *   );
  * @endcode
  */
-$databases = array (
-  'default' => 
-  array (
-    'default' => 
-    array (
-      'database' => 'drupal-demo',
-      'username' => 'root',
-      'password' => 'root',
-      'host' => 'localhost',
-      'port' => '',
-      'driver' => 'mysql',
-      'prefix' => '',
-    ),
-  ),
-);
+
+if (isset($_SERVER['environment']) && $_SERVER['environment' == 'pagoda']) {
+    $databases = array (
+      'default' => 
+      array (
+        'default' => 
+        array (
+          'database' => 'kristan',
+          'username' => 'jenice',
+          'password' => 'Wf6xrPyq',
+          'host' => 'localhost;unix_socket=/tmp/mysql/kristan.sock',
+          'port' => '',
+          'driver' => 'mysql',
+          'prefix' => '',
+        ),
+      ),
+    );
+}
+
+else {
+    $databases = array (
+      'default' => 
+      array (
+        'default' => 
+        array (
+          'database' => 'drupal-demo',
+          'username' => 'root',
+          'password' => 'root',
+          'host' => 'localhost',
+          'port' => '',
+          'driver' => 'mysql',
+          'prefix' => '',
+        ),
+      ),
+    );
+}
+
 
 /**
  * Access control for update.php script.
