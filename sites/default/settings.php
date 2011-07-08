@@ -188,7 +188,7 @@ if (isset($_SERVER['environment']) && ($_SERVER['environment'] == 'pagoda')){
           'database' => 'shelli',
           'username' => 'danuta',
           'password' => 'RgwtA9VS',
-          'host' => 'localhost;unix_socket=/tmp/mysql/shelli-test-break.sock',
+          'host' => 'localhost;unix_socket=/tmp/mysql/shelli.sock',
           'port' => '',
           'driver' => 'mysql',
           'prefix' => '',
