@@ -179,7 +179,7 @@
  * @endcode
  */
  
-if (isset($_SERVER['environment']) && ($_SERVER['environment'] == 'pagoda-break-settings')){
+if (isset($_SERVER['environment']) && ($_SERVER['environment'] == 'pagoda')){
     $databases = array (
       'default' => 
       array (
