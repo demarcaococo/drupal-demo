@@ -185,10 +185,10 @@ if (isset($_SERVER['environment']) && ($_SERVER['environment'] == 'pagoda')){
       array (
         'default' => 
         array (
-          'database' => 'shelli',
-          'username' => 'danuta',
-          'password' => 'RgwtA9VS',
-          'host' => 'localhost;unix_socket=/tmp/mysql/shelli.sock',
+          'database' => 'kristan',
+          'username' => 'jenice',
+          'password' => 'Wf6xrPyq',
+          'host' => 'localhost;unix_socket=/tmp/mysql/kristan.sock',
           'port' => '',
           'driver' => 'mysql',
           'prefix' => '',
