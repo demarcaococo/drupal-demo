@@ -187,7 +187,7 @@ if (isset($_SERVER['ENVIRONMENT']) && $_SERVER['ENVIRONMENT'] == 'PAGODA') {
           'database' => 'donette',
           'username' => 'yoshie',
           'password' => '2w9rnAui',
-          'host' => 'localhost;unix_socket=/tmp/mysql/kristan.sock',
+          'host' => 'localhost;unix_socket=/tmp/mysql/donette.sock',
           'port' => '',
           'driver' => 'mysql',
           'prefix' => '',
