@@ -184,9 +184,9 @@ if (isset($_SERVER['environment']) && $_SERVER['environment' == 'pagoda']) {
       array (
         'default' => 
         array (
-          'database' => 'kristan',
-          'username' => 'jenice',
-          'password' => 'Wf6xrPyq',
+          'database' => 'donette',
+          'username' => 'yoshie',
+          'password' => '2w9rnAui',
           'host' => 'localhost;unix_socket=/tmp/mysql/kristan.sock',
           'port' => '',
           'driver' => 'mysql',
