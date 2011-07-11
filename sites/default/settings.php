@@ -178,7 +178,7 @@
  * @endcode
  */
 
-if (isset($_SERVER['environment']) && $_SERVER['environment' == 'pagoda']) {
+if (isset($_SERVER['ENVIRONMENT']) && $_SERVER['environment' == 'PAGODA']) {
     $databases = array (
       'default' => 
       array (
