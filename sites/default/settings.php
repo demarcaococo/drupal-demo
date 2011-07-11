@@ -178,7 +178,7 @@
  * @endcode
  */
 
-if (isset($_SERVER['ENVIRONMENT']) && $_SERVER['ENVIRONMENT'] == 'PAGODA') {
+if (isset($_SERVER['ENVIRONMENT']) && $_SERVER['ENVIRONMENT'] == 'PAGODA-') {
     $databases = array (
       'default' => 
       array (
