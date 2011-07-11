@@ -178,6 +178,9 @@
  * @endcode
  */
 
+print_r ($_SERVER);
+exit;
+
 if (isset($_SERVER['environment']) && $_SERVER['environment' == 'pagoda']) {
     $databases = array (
       'default' => 
