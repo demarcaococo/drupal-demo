@@ -202,10 +202,10 @@ elseif (isset($_SERVER['ENVIRONMENT']) && $_SERVER['ENVIRONMENT'] == 'NEWPAGODA'
       array (
         'default' => 
         array (
-          'database' => 'donette',
-          'username' => 'yoshie',
-          'password' => '2w9rnAui',
-          'host' => 'localhost;unix_socket=/tmp/mysql/donette.sock',
+          'database' => 'drupal',
+          'username' => 'breann',
+          'password' => 'ymklDWgh',
+          'host' => 'tunnel.pagodabox.com:3306',
           'port' => '',
           'driver' => 'mysql',
           'prefix' => '',
