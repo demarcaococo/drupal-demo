@@ -196,6 +196,24 @@ if (isset($_SERVER['ENVIRONMENT']) && $_SERVER['ENVIRONMENT'] == 'PAGODA') {
     );
 }
 
+elseif (isset($_SERVER['ENVIRONMENT']) && $_SERVER['ENVIRONMENT'] == 'NEWPAGODA') {
+    $databases = array (
+      'default' => 
+      array (
+        'default' => 
+        array (
+          'database' => 'donette',
+          'username' => 'yoshie',
+          'password' => '2w9rnAui',
+          'host' => 'localhost;unix_socket=/tmp/mysql/donette.sock',
+          'port' => '',
+          'driver' => 'mysql',
+          'prefix' => '',
+        ),
+      ),
+    );
+}
+
 else {
     $databases = array (
       'default' => 
