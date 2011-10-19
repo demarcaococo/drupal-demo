@@ -196,7 +196,7 @@ if (isset($_SERVER['ENVIRONMENT']) && $_SERVER['ENVIRONMENT'] == 'PAGODA') {
     );
 }
 
-elseif ($_SERVER['PAGENV']) {
+elseif (isset($_SERVER['PAGENV']) && $_SERVER['PAGENV'] == 'TRUE') {
     $databases = array (
       'default' => 
       array (
