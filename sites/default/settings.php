@@ -202,11 +202,11 @@ elseif (isset($_SERVER['PAGENV']) && $_SERVER['PAGENV'] == 'TRUE') {
       array (
         'default' => 
         array (
-          'database' => 'drupal',
-          'username' => 'breann',
-          'password' => 'ymklDWgh',
+          'database' => 'shannon',
+          'username' => 'lela',
+          'password' => 'YWF09ISk',
           'host' => 'tunnel.pagodabox.com',
-          'port' => '3306',
+          'port' => '3307',
           'driver' => 'mysql',
           'prefix' => '',
         ),
