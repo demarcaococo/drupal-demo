@@ -1,27 +1,16 @@
-<p class="active">Getting Drupal up and running is pretty simple. There are a few things to be aware of when launching Drupal on Pagoda Box. After reading this, you should be able to:</p>
-<ul class="checked">
-	<li><span class="guides-sprite check">&nbsp;</span>Create a local instance of Drupal</li>
-	<li><span class="guides-sprite check">&nbsp;</span>Take your local instance of Drupal and deploy it to Pagoda Box</li>
-	<li><span class="guides-sprite check">&nbsp;</span>Create a Pagoda database and access it from your Drupal app</li>
-	<li><span class="guides-sprite check">&nbsp;</span>Bask in the combined awesomeness of Drupal and Pagoda Box</li>
-</ul>
-<div class="line-divider">&nbsp;</div>
 <h2 id="launching-your-drupal-app">Launching Your Drupal App</h2>
-<div class="justify">
-	<h4 id="-create-a-local-instance-of-your-app">Create a Local Instance of Drupal</h4>
-	<p>We&rsquo;re assuming that you&rsquo;ve already done this. If you haven&rsquo;t and don&rsquo;t know how, here&rsquo;s a couple links for you:<br />
-		<a href="http://drupal.org/node/66187" target="_blank">Create a local Drupal instance on a Mac</a><br />
-		<a href="http://drupal.org/documentation/install/windows" target="_blank">Create a local Drupal instance in Windows</a></p>
-	<h3 class="tag"><span class="guides-sprite w-cap">&nbsp;</span><span class="horizontal-guides-sprite white">Important: No Auto-Installers on Pagoda Box</span><span class="guides-sprite w-end-cap">&nbsp;</span></h3>
-	<div class="block yellow">
-		<p>You are not able to run auto-installers on Pagoda Box. If you use Drupal&#39;s auto-installer, run it locally to generate all the necessary configuration files, then deploy your app to Pagoda Box.</p>
-	</div>
-	<h4 id="display-errors">Display Errors</h4>
-	<p>During development, we recommend configuring Drupal to display errors in the admin panel. By default Drupal is configured to display &quot;All messages&quot;, so unless you&#39;ve changed that, you should be ready to go.</p>
-	<h4 id="-create-a-github-repo-for-your-app">Create a Git Repo for Your Drupal App</h4>
-	<p><a href="/customer/portal/articles/202225-setting-up-git">Set up Git</a>, if you haven't already. Then initialize your app as a git repo.</p>	
-	<h4 id="drupal-into-subdir">Move Drupal into Subdirectory</h4>
-	<p>Because Drupal needs a Temporary Directory that is not accessible over the web, move your entire Drupal application(excluding .git/ & .gitignore) into a subdirectory. We suggest naming the directory "drupal" so it coincides with the below Boxfile. You don't need to create the actual temporary directory as the below Boxfile will create it for you when your app is deployed.</p>
+<h4 id="-create-a-local-instance-of-your-app">Create a Local Instance of Drupal</h4>
+<p>We&rsquo;re assuming that you&rsquo;ve already done this. If you haven&rsquo;t and don&rsquo;t know how, here&rsquo;s a couple links for you:<br />
+<a href="http://drupal.org/node/66187" target="_blank">Create a local Drupal instance on a Mac</a><br />
+a href="http://drupal.org/documentation/install/windows" target="_blank">Create a local Drupal instance in Windows</a></p>
+<h3 class="tag"><span class="guides-sprite w-cap">&nbsp;</span><span class="horizontal-guides-sprite white">Important: No Auto-Installers on Pagoda Box</span><span class="guides-sprite w-end-cap">&nbsp;</span></h3>
+<p>You are not able to run auto-installers on Pagoda Box. If you use Drupal&#39;s auto-installer, run it locally to generate all the necessary configuration files, then deploy your app to Pagoda Box.</p>
+<h4 id="display-errors">Display Errors</h4>
+<p>During development, we recommend configuring Drupal to display errors in the admin panel. By default Drupal is configured to display &quot;All messages&quot;, so unless you&#39;ve changed that, you should be ready to go.</p>
+<h4 id="-create-a-github-repo-for-your-app">Create a Git Repo for Your Drupal App</h4>
+<p><a href="/customer/portal/articles/202225-setting-up-git">Set up Git</a>, if you haven't already. Then initialize your app as a git repo.</p>	
+<h4 id="drupal-into-subdir">Move Drupal into Subdirectory</h4>
+<p>Because Drupal needs a Temporary Directory that is not accessible over the web, move your entire Drupal application(excluding .git/ & .gitignore) into a subdirectory. We suggest naming the directory "drupal" so it coincides with the below Boxfile. You don't need to create the actual temporary directory as the below Boxfile will create it for you when your app is deployed.</p>
 	<div class="vertical-guides-sprite image">
 	  <span class="guides-sprite top"></span>
 	  <img src="http://assistly-assets.pagodabox.com/images/guides/drupal-sub-dir-sml.png" alt="" />
@@ -176,8 +165,6 @@
 			- <a href="/customer/portal/articles/175384">Sending Mail from Your App</a><br />
 			- <a href="/customer/portal/articles/175471">Creating a DNS Alias</a><br />
 			- <a href="/customer/portal/articles/175459">Scaling your App</a>(Coming)</p>
-	</div>
-</div>
 <h2 id="post-launch-workflow-recommendations">Post-launch Workflow Recommendations</h2>
 <div class="justify">
 	<h4 id="-things-to-note">Things to Note</h4>
@@ -190,37 +177,4 @@
 			<p>Remember that your local database and your live database are two completely separate databases. Anytime you want to publish a new post or add media to your Drupal app, it needs to be done through your live admin, not your local admin. Your Drupal content is not stored in your repo so any content you add locally will not be pushed live with your repo.</p>
 		</li>
 	</ol>
-</div>
-
-<div class="vertical-guides-sprite table-contents">
-	<span class="guides-sprite top-corner">&nbsp;</span>
-	<h3>Table of Contents</h3>
-	<h4><a href="#launching-your-drupal-app">Launching Your Drupal App</a></h4>
-	<ul>
-		<li><a href="#-create-a-local-instance-of-your-app">Create a Local Instance of Drupal</a></li>
-		<li><a href="#display-errors">Display Errors</a></li>
-		<li><a href="#-create-a-github-repo-for-your-app">Create Your Git Repo</a></li>
-		<li><a href="#drupal-into-subdir">Move Drupal into Subdirectory</a></li>
-		<li><a href="#-edit-gitignore-file">Edit .gitignore</a></li>
-		<li><span class="guides-sprite tag"></span><a href="#gitignore">Edit .gitignore File</a></li>
-		<li><a href="#-the-all--powerful-box-file">Boxfile</a></li>
-		<li><span class="guides-sprite tag">&nbsp;</span><a href="#drupal-default-box-file">Boxfile</a></li>
-		<li><a href="#local_vs._live_environments">Local vs. Live Environments</a></li>
-		<li><span class="guides-sprite tag">&nbsp;</span><a href="#config-for-your-new-database">Connecting Drupal to your Database</a></li>
-		<li><a href="#-deploy-your-app-on-pagoda-box">Deploying Your App to Pagoda Box</a></li>
-		<li><a href="#-create-a-database-and-link-your-app-to-it">Creating a Database</a></li>
-		<li><a href="#-environment-variable">Create Environment Variable</a></li>
-		<li><a href="#get-your-local-database-to-pagoda">Get your local database to Pagoda</a></li>
-	</ul>
-	<h4><a href="#post-launch-workflow-recommendations">Post-launch Workflow</a></h4>
-	<ul>
-		<li><a href="#-things-to-note">Things to Note</a></li>
-	</ul>
-	<br/>
-	<h3>Demo Links</h3>
-	<ul>
-	    <li><a href="https://github.com/pagodabox/drupal-demo" target=î_blankî>GitHub Repo</a></li>
-	    <li><a href="http://drupal-demo.pagodabox.com" target=î_blankî>Drupal Demo</a></li>
-    </ul>
-	<span class="guides-sprite bottom-corner">&nbsp;</span>
 </div>
