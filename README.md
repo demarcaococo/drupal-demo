@@ -11,14 +11,12 @@ a href="http://drupal.org/documentation/install/windows" target="_blank">Create 
 <p><a href="/customer/portal/articles/202225-setting-up-git">Set up Git</a>, if you haven't already. Then initialize your app as a git repo.</p>	
 <h4 id="drupal-into-subdir">Move Drupal into Subdirectory</h4>
 <p>Because Drupal needs a Temporary Directory that is not accessible over the web, move your entire Drupal application(excluding .git/ & .gitignore) into a subdirectory. We suggest naming the directory "drupal" so it coincides with the below Boxfile. You don't need to create the actual temporary directory as the below Boxfile will create it for you when your app is deployed.</p>
-	<div class="vertical-guides-sprite image">
-	  <span class="guides-sprite top"></span>
-	  <img src="http://assistly-assets.pagodabox.com/images/guides/drupal-sub-dir-sml.png" alt="" />
-	  <a href="#" targ="http://assistly-assets.pagodabox.com/images/guides/drupal-sub-dir.png" class="guides-sprite zoom"></a>
-	  <span class="guides-sprite bottom">&nbsp;</span>
-	</div>
-	<h4 id="-edit-gitignore-file">Edit .gitignore file</h4>
-	<p>Depending on your version of Drupal, it may have come with a default .gitignore file. Remove the line with the settings.php file as Pagoda will need this included in your repo. Then also prepend the "files" and "private" directories with the new "drupal" directory added in the last step.</p>
+<span class="guides-sprite top"></span>
+<img src="http://assistly-assets.pagodabox.com/images/guides/drupal-sub-dir-sml.png" alt="" />
+<a href="#" targ="http://assistly-assets.pagodabox.com/images/guides/drupal-sub-dir.png" class="guides-sprite zoom"></a>
+<span class="guides-sprite bottom">&nbsp;</span>
+<h4 id="-edit-gitignore-file">Edit .gitignore file</h4>
+<p>Depending on your version of Drupal, it may have come with a default .gitignore file. Remove the line with the settings.php file as Pagoda will need this included in your repo. Then also prepend the "files" and "private" directories with the new "drupal" directory added in the last step.</p>
 	<h3 id="gitignore" class="tag"><span class="guides-sprite cap">&nbsp;</span><span class="horizontal-guides-sprite title">GIT</span><span class="horizontal-guides-sprite green">Edit .gitignore File</span><span class="guides-sprite green-end-cap"></span></h3>
 	<div class="block grey code">
 	 <script class='brush: plain; class-name: strike' type='syntaxhighlighter'>
@@ -34,10 +32,7 @@ a href="http://drupal.org/documentation/install/windows" target="_blank">Create 
        drupal/sites/*/private
 	   ]]>
 	 </script>
-	 <div class="extra">
-	   /.gitignore
-	 </div>
-	</div>
+
 	<h4 id="-the-all--powerful-box-file">The All-Powerful Boxfile</h4>
   <p>Create a file named &quot;Boxfile&quot; in the base directory of your git repo and paste in the following code snippet. The Boxfile is your Pagoda Box config file. If you want the Boxfile explained in more detail, click <a href="/customer/portal/articles/175475">here</a>.</p>
 	<h3 class="tag" id="drupal-default-box-file"><span class="guides-sprite cap">&nbsp;</span><span class="horizontal-guides-sprite title">PHP</span><span class="horizontal-guides-sprite green">Drupal Boxfile Example</span><span class="guides-sprite green-end-cap">&nbsp;</span></h3>
