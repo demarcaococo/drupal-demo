@@ -2,7 +2,7 @@
 <h4 id="-create-a-local-instance-of-your-app">Create a Local Instance of Drupal</h4>
 <p>We&rsquo;re assuming that you&rsquo;ve already done this. If you haven&rsquo;t and don&rsquo;t know how, here&rsquo;s a couple links for you:<br />
 <a href="http://drupal.org/node/66187" target="_blank">Create a local Drupal instance on a Mac</a><br />
-a href="http://drupal.org/documentation/install/windows" target="_blank">Create a local Drupal instance in Windows</a></p>
+<a href="http://drupal.org/documentation/install/windows" target="_blank">Create a local Drupal instance in Windows</a></p>
 <h3 class="tag"><span class="guides-sprite w-cap">&nbsp;</span><span class="horizontal-guides-sprite white">Important: No Auto-Installers on Pagoda Box</span><span class="guides-sprite w-end-cap">&nbsp;</span></h3>
 <p>You are not able to run auto-installers on Pagoda Box. If you use Drupal&#39;s auto-installer, run it locally to generate all the necessary configuration files, then deploy your app to Pagoda Box.</p>
 <h4 id="display-errors">Display Errors</h4>
@@ -17,8 +17,7 @@ a href="http://drupal.org/documentation/install/windows" target="_blank">Create 
 <span class="guides-sprite bottom">&nbsp;</span>
 <h4 id="-edit-gitignore-file">Edit .gitignore file</h4>
 <p>Depending on your version of Drupal, it may have come with a default .gitignore file. Remove the line with the settings.php file as Pagoda will need this included in your repo. Then also prepend the "files" and "private" directories with the new "drupal" directory added in the last step.</p>
-	<h3 id="gitignore" class="tag"><span class="guides-sprite cap">&nbsp;</span><span class="horizontal-guides-sprite title">GIT</span><span class="horizontal-guides-sprite green">Edit .gitignore File</span><span class="guides-sprite green-end-cap"></span></h3>
-	<div class="block grey code">
+<h3 id="gitignore" class="tag"><span class="guides-sprite cap">&nbsp;</span><span class="horizontal-guides-sprite title">GIT</span><span class="horizontal-guides-sprite green">Edit .gitignore File</span><span class="guides-sprite green-end-cap"></span></h3>
 	 <script class='brush: plain; class-name: strike' type='syntaxhighlighter'>
 	   <![CDATA[
        sites/*/settings*.php
@@ -32,11 +31,9 @@ a href="http://drupal.org/documentation/install/windows" target="_blank">Create 
        drupal/sites/*/private
 	   ]]>
 	 </script>
-
-	<h4 id="-the-all--powerful-box-file">The All-Powerful Boxfile</h4>
-  <p>Create a file named &quot;Boxfile&quot; in the base directory of your git repo and paste in the following code snippet. The Boxfile is your Pagoda Box config file. If you want the Boxfile explained in more detail, click <a href="/customer/portal/articles/175475">here</a>.</p>
+<h4 id="-the-all--powerful-box-file">The All-Powerful Boxfile</h4>
+<p>Create a file named &quot;Boxfile&quot; in the base directory of your git repo and paste in the following code snippet. The Boxfile is your Pagoda Box config file. If you want the Boxfile explained in more detail, click <a href="/customer/portal/articles/175475">here</a>.</p>
 	<h3 class="tag" id="drupal-default-box-file"><span class="guides-sprite cap">&nbsp;</span><span class="horizontal-guides-sprite title">PHP</span><span class="horizontal-guides-sprite green">Drupal Boxfile Example</span><span class="guides-sprite green-end-cap">&nbsp;</span></h3>
-	<div class="block grey code" id="default-box-config-settings">
     <script class='brush: php' type='syntaxhighlighter'>
       <![CDATA[
           web1: #component type & number
@@ -61,24 +58,17 @@ a href="http://drupal.org/documentation/install/windows" target="_blank">Create 
               type: mysql
       ]]>
     </script>
-    <div class="extra">
-	    /Boxfile
-	  </div>
-	</div>
-	<p>Identifying sites/default/files as a writable directory will allow your application to write images, uploads, etc. to that directory and then share them among application clones. The PHP extensions are those required by the <a href="http://drupal.org/requirements" target="_blank">Drupal System Requirements</a>.</p>
+<p>Identifying sites/default/files as a writable directory will allow your application to write images, uploads, etc. to that directory and then share them among application clones. The PHP extensions are those required by the <a href="http://drupal.org/requirements" target="_blank">Drupal System Requirements</a>.</p>
 	<p>Your directory structure should now look something like this:</p>
-	<div class="vertical-guides-sprite image">
 	  <span class="guides-sprite top"></span>
 	  <img src="http://assistly-assets.pagodabox.com/images/guides/drupal-dir-sml.png" alt="" />
 	  <a href="#" targ="http://assistly-assets.pagodabox.com/images/guides/drupal-dir.png" class="guides-sprite zoom"></a>
 	  <span class="guides-sprite bottom">&nbsp;</span>
-	</div>
 	<p>If you want to know more about writing your own or customizing your Boxfile, check out <a href="/customer/portal/articles/175475">Boxfile Guide</a>.</p>
 	<h4 id="local_vs._live_environments">Local vs. Live Environments</h4>
 	<p>Since Drupal doesn&rsquo;t natively accommodate database settings for multiple environments(Local vs Live), we recommend adding some additional logic to your sites/default/settings.php file to dynamically switch database settings based on an environment variable. Note that the Pagoda database credentials have been replaced with auto-created <a href="/customer/portal/articles/175470">global variables</a> instead of the actual credentials. But, you can also hard code the <a href="/customer/portal/articles/175426-creating-a-database#-connecting-to-your-db">credentials</a> if you prefer.</p>
 	<h3 class="tag">
 		<span class="guides-sprite cap">&nbsp;</span><span class="horizontal-guides-sprite title">PHP</span><span class="horizontal-guides-sprite green">Set Your Database Credentials</span><span class="guides-sprite green-end-cap">&nbsp;</span></h3>
-	<div class="block grey code" id="config-for-your-new-database">
     <script class='brush: php; class-name: strike' type='syntaxhighlighter'>
       <![CDATA[
           $databases = array (
@@ -137,10 +127,7 @@ a href="http://drupal.org/documentation/install/windows" target="_blank">Create 
           }
       ]]>
 		</script>
-		<div class="extra">
-			/sites/default/settings.php
-		</div>
-	</div>
+
 	<h4 id="-deploy-your-app-on-pagoda-box">Deploy Your App on Pagoda Box</h4>
 	<p>Just go through the normal process of <a href="/customer/portal/articles/174146-launching-your-first-app">deploying your app</a>.</p>
 	<h4 id="create-database">Create a Database</h4>
@@ -154,14 +141,14 @@ a href="http://drupal.org/documentation/install/windows" target="_blank">Create 
 	<p>Lastly, configure Drupal to use the "tmp" you created in your Boxfile, by going to yourapp.pagodabox.com/admin/config/media/file-system and entering "/tmp" as the "Temporary directory".</p>
 	<h3 class="tag">
 		<span class="guides-sprite w-cap">&nbsp;</span><span class="horizontal-guides-sprite white">Quick Note</span><span class="guides-sprite w-end-cap">&nbsp;</span></h3>
-	<div class="block yellow">
+
 		<p>If you set <a href="#display-errors">errors to display</a>, now would be a good time to turn it off, unless your still debugging your Drupal app.</p>
 		<p>There&rsquo;s a few more things you can do to make your app fully functional that are covered in these other guides:<br />
 			- <a href="/customer/portal/articles/175384">Sending Mail from Your App</a><br />
 			- <a href="/customer/portal/articles/175471">Creating a DNS Alias</a><br />
 			- <a href="/customer/portal/articles/175459">Scaling your App</a>(Coming)</p>
 <h2 id="post-launch-workflow-recommendations">Post-launch Workflow Recommendations</h2>
-<div class="justify">
+
 	<h4 id="-things-to-note">Things to Note</h4>
 	<p>Pagoda Box makes managing and updating your Drupal app really easy, but there&rsquo;s some things you should know.</p>
 	<ol>
@@ -172,4 +159,3 @@ a href="http://drupal.org/documentation/install/windows" target="_blank">Create 
 			<p>Remember that your local database and your live database are two completely separate databases. Anytime you want to publish a new post or add media to your Drupal app, it needs to be done through your live admin, not your local admin. Your Drupal content is not stored in your repo so any content you add locally will not be pushed live with your repo.</p>
 		</li>
 	</ol>
-</div>
